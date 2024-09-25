@@ -1,0 +1,70 @@
+const C3 = self.C3;
+self.C3_GetObjectRefTable = function () {
+	return [
+		C3.Plugins.Sprite,
+		C3.Behaviors.solid,
+		C3.Behaviors.bound,
+		C3.Behaviors.EightDir,
+		C3.Behaviors.Platform,
+		C3.Plugins.TiledBg,
+		C3.Behaviors.custom,
+		C3.Behaviors.Bullet,
+		C3.Plugins.Keyboard,
+		C3.Plugins.Text,
+		C3.Plugins.System.Cnds.OnLayoutStart,
+		C3.Behaviors.custom.Acts.SetSpeed,
+		C3.Behaviors.custom.Acts.AccelerateAngle,
+		C3.Plugins.System.Cnds.Every,
+		C3.Behaviors.custom.Acts.Reverse,
+		C3.Plugins.Keyboard.Cnds.IsKeyDown,
+		C3.Behaviors.EightDir.Acts.SimulateControl,
+		C3.Plugins.System.Acts.Wait,
+		C3.Behaviors.Bullet.Acts.SetSpeed,
+		C3.Behaviors.Bullet.Acts.SetAngleOfMotion,
+		C3.Plugins.System.Exps.random,
+		C3.Plugins.Sprite.Cnds.OnCollision,
+		C3.Plugins.Sprite.Acts.SetAnim,
+		C3.Plugins.System.Acts.AddVar,
+		C3.Plugins.System.Cnds.EveryTick,
+		C3.Plugins.Text.Acts.SetText,
+		C3.Plugins.System.Cnds.CompareVar,
+		C3.Behaviors.Bullet.Acts.SetAcceleration,
+		C3.Plugins.Text.Acts.SetVisible,
+		C3.Plugins.System.Acts.RestartLayout,
+		C3.Plugins.System.Acts.ResetEventVar
+	];
+};
+self.C3_JsPropNameTable = [
+	{Solid: 0},
+	{BoundToLayout: 0},
+	{"8Direction": 0},
+	{Hand1: 0},
+	{Platform: 0},
+	{Hand2: 0},
+	{Custom: 0},
+	{TiledBackground: 0},
+	{Bullet: 0},
+	{Ball: 0},
+	{GameOver: 0},
+	{Keyboard: 0},
+	{Solids: 0},
+	{Text: 0},
+	{Text2: 0},
+	{Text3: 0},
+	{Sprite: 0},
+	{Score: 0}
+];
+
+self.InstanceType = {
+	Hand1: class extends self.ISpriteInstance {},
+	Hand2: class extends self.ISpriteInstance {},
+	TiledBackground: class extends self.ITiledBackgroundInstance {},
+	Ball: class extends self.ISpriteInstance {},
+	GameOver: class extends self.ISpriteInstance {},
+	Keyboard: class extends self.IInstance {},
+	Solids: class extends self.ISpriteInstance {},
+	Text: class extends self.ITextInstance {},
+	Text2: class extends self.ITextInstance {},
+	Text3: class extends self.ITextInstance {},
+	Sprite: class extends self.ISpriteInstance {}
+}
